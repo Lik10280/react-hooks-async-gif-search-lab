@@ -1,7 +1,6 @@
 import React from "react";
 import GifSearch from "./GifSearch";
 import GifList from "./GifList";
-// import "./App.css";
 import { useState, useEffect } from "react";
 
 function GifListContainer (){
@@ -13,7 +12,7 @@ function GifListContainer (){
     useEffect(()=>{
         fetch(`https://api.giphy.com/v1/gifs/search?q=${search}&api_key=${myApiKey}&rating=g`)
         .then(response => response.json())
-        // .then((data)=> console.log(data))})
+        //.then(data => console.log(data))
         .then(({data}) => {
             const gifs = data.slice(0,3).map((gif)=>({url: gif.images.original.url }));
             setGif(gifs);
