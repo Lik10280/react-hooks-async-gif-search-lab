@@ -14,10 +14,10 @@ function GifSearch({search}){
         <div>
         { <form onSubmit={handleSubmit}>
             <label>
-                Enter Giphy name
+                Giphy name
                 <input type="text" name="name" value={userSearch} onChange={handleSearch}/>
             </label>
-            <button type="submit" value="Submit">Search Gifs</button>
+            <button type="submit" value="Submit">Search</button>
             </form> }
         </div>
     )

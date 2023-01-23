@@ -7,10 +7,10 @@ function GifListContainer (){
     const[gif, setGif] = useState([])
     const[search, setSearch] = useState("")
     // provide personal API key to a variable
-    const myApiKey= "8dnjIQswNVaihW9B296nmf9g9EfBtIZg";
+    const apiKey= "M1ERXfrsAHT7xM2SOyp3YhkSdFFdGxbX";
 
     useEffect(()=>{
-        fetch(`https://api.giphy.com/v1/gifs/search?q=${search}&api_key=${myApiKey}&rating=g`)
+        fetch(`https://api.giphy.com/v1/gifs/search?q=${search}&api_key=${apiKey}&rating=g`)
         .then(response => response.json())
         //.then(data => console.log(data))
         .then(({data}) => {
